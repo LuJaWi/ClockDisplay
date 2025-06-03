@@ -6,6 +6,7 @@ class SnakeFiller {
 public:
     SnakeFiller(int x1, int y1, int x2, int y2, TFT_eSPI &tft);
     void randomPixel();
+    void reset();
 
 private:
     int x_min, y_min, x_max, y_max;
@@ -13,6 +14,4 @@ private:
     TFT_eSPI &tft;
     bool isInitialized = false;
     int color;
-
-    void snakeFill(TFT_eSPI &tft);
 };

@@ -29,5 +29,5 @@ ESP32 + ILI9341
 |  DC   |   2   |
 |  RST  |   4   |
 |  CS   |   15  |
-|  VCC  |  3.3v |
 |  GND  |  GND  |
+|  VCC  |  3.3v |

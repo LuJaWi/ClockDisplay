@@ -1,10 +1,9 @@
 #include <Arduino.h>
 #include <TFT_eSPI.h>
+#include "wifi_utils.h"
+#include "weather_utils.h"
 
 #include "screen_styles.h"
-
-#include <HTTPClient.h>
-#include <WiFiClient.h>
 #include "../config/env.h"
 #include "../config/test.h"
 

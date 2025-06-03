@@ -1,5 +1,6 @@
 #include "snakeFiller.h"
 #include <Arduino.h>
+#include "screen_styles.h"
 
 SnakeFiller::SnakeFiller(int x1, int y1, int x2, int y2, TFT_eSPI &tft)
     : x_min(x1), y_min(y1), x_max(x2), y_max(y2),
@@ -13,11 +14,6 @@ SnakeFiller::SnakeFiller(int x1, int y1, int x2, int y2, TFT_eSPI &tft)
 }
 
 void SnakeFiller::randomPixel()
-{
-  snakeFill(tft);
-}
-
-void SnakeFiller::snakeFill(TFT_eSPI &tft)
 {
   uint16_t r = (color >> 11) & 0x1F;
   uint16_t g = (color >> 5) & 0x3F;
@@ -94,3 +90,8 @@ void SnakeFiller::snakeFill(TFT_eSPI &tft)
       }
     }
   }
+
+
+void SnakeFiller::reset() {
+  tft.fillRect(x_min,y_min,x_max,y_max, BG_COLOR);
+}
